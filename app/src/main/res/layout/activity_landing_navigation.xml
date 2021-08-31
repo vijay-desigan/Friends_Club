@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Landing_navigationActivity"
+    android:id="@+id/relative_landing_page">
+
+    <com.lorentzos.flingswipe.SwipeFlingAdapterView
+        android:id="@+id/frame"
+        android:layout_width="match_parent"
+        android:layout_height="514dp"
+        android:background="#ffeee9e2"
+        app:rotation_degrees="15.5"
+        tools:context=".MyActivity" />
+    <ImageView
+        android:layout_margin="10dp"
+        android:id="@+id/iv_match_person"
+        android:layout_width="match_parent"
+        android:layout_height="500dp" />//previous value was 500dp
+
+    <TextView
+        android:id="@+id/tv_match_person"
+        android:layout_below="@+id/iv_match_person"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="10dp"
+        android:text="test name"
+        android:textSize="40sp"
+        app:layout_constraintBottom_toTopOf="@+id/bottom_navigation" />
+    <TextView
+        android:id="@+id/match_person_about"
+        android:layout_below="@+id/tv_match_person"
+        android:layout_marginLeft="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="about the user"
+        android:textSize="20dp"/>
+
+    <LinearLayout
+        android:layout_below="@id/match_person_about"
+        android:layout_marginTop="5dp"
+        android:gravity="center"
+        android:layout_gravity="center"
+        android:layout_marginHorizontal="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <ImageButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_restore_landing_page"
+            android:background="@drawable/circle_button" />
+
+        <ImageButton
+            android:layout_marginLeft="20dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_close_landing_page"
+            android:background="@drawable/circle_button" />
+
+        <ImageButton
+            android:layout_marginLeft="20dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_star_landing_page"
+            android:background="@drawable/circle_button"/>
+
+        <ImageButton
+            android:layout_marginLeft="20dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_like_landing_page"
+            android:background="@drawable/circle_button" />
+
+        <ImageButton
+            android:layout_marginLeft="20dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_thumb_up_landing_page"
+            android:background="@drawable/circle_button" />
+
+    </LinearLayout>
+
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:foregroundGravity="center"
+            android:id="@+id/bottom_navigation"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:itemTextColor="@drawable/text_color_sselector"
+            app:itemIconTint="@drawable/text_color_sselector"
+            app:menu="@menu/menu_navigation"
+            android:layout_alignParentBottom="true"/>
+
+
+
+</RelativeLayout>

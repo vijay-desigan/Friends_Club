@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".settings_profile">
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <androidx.cardview.widget.CardView
+            android:layout_marginTop="20dp"
+            android:layout_gravity="center"
+            app:cardPreventCornerOverlap="false"
+            app:cardCornerRadius="75dp"
+            android:layout_width="120dp"
+            android:layout_height="120dp">
+            <ImageButton
+                android:id="@+id/image_update"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"/>
+        </androidx.cardview.widget.CardView>
+        <TextView
+            android:layout_marginTop="5dp"
+            android:gravity="center"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="@color/black"
+            android:textSize="20sp"
+            android:text="Change picture"/>
+        <TextView
+            android:layout_marginTop="5dp"
+            android:layout_marginHorizontal="10dp"
+            android:gravity="left"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="@color/black"
+            android:textSize="21sp"
+            android:text=" About you"/>
+        <EditText
+            android:layout_marginTop="5dp"
+            android:layout_marginHorizontal="10dp"
+            android:gravity="left"
+            android:id="@+id/about_et"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="20sp"
+            android:text="I'm a"/>
+        <TextView
+            android:layout_marginTop="5dp"
+            android:layout_marginHorizontal="10dp"
+            android:gravity="left"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="@color/black"
+            android:textSize="21sp"
+            android:text=" Contact"/>
+        <EditText
+            android:layout_marginTop="5dp"
+            android:layout_marginHorizontal="10dp"
+            android:gravity="left"
+            android:id="@+id/phone_no_et"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="20sp"
+            android:inputType="number"
+            android:text="Add phone number"/>
+        <TextView
+            android:layout_marginTop="5dp"
+            android:layout_marginHorizontal="10dp"
+            android:gravity="left"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="@color/black"
+            android:textSize="21sp"
+            android:text="Job tittle"/>
+        <EditText
+            android:layout_marginTop="5dp"
+            android:layout_marginHorizontal="10dp"
+            android:gravity="left"
+            android:id="@+id/job_et"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="20sp"
+            android:text="Add job tittle"/>
+        <TextView
+            android:layout_marginTop="5dp"
+            android:layout_marginHorizontal="10dp"
+            android:gravity="left"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="@color/black"
+            android:textSize="21sp"
+            android:text="Company"/>
+        <EditText
+            android:layout_marginTop="5dp"
+            android:layout_marginHorizontal="10dp"
+            android:gravity="left"
+            android:id="@+id/company_et"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="20sp"
+            android:text="Add Company"/>
+        <TextView
+            android:layout_marginTop="5dp"
+            android:layout_marginHorizontal="10dp"
+            android:gravity="left"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="@color/black"
+            android:textSize="21sp"
+            android:text="School"/>
+        <EditText
+            android:layout_marginTop="5dp"
+            android:layout_marginHorizontal="10dp"
+            android:gravity="left"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/university_et"
+            android:textSize="20sp"
+            android:text="Add University"/>
+        <TextView
+            android:layout_marginTop="5dp"
+            android:layout_marginHorizontal="10dp"
+            android:gravity="left"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="@color/black"
+            android:textSize="21sp"
+            android:text="Living in"/>
+        <EditText
+            android:layout_marginTop="5dp"
+            android:layout_marginHorizontal="10dp"
+            android:gravity="left"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/city_et"
+            android:textSize="20sp"
+            android:text="Add city"/>
+        <Button
+            android:layout_marginTop="5dp"
+            android:id="@+id/save_changes_bt"
+            android:text="Save Changes"
+            android:layout_marginHorizontal="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+    </LinearLayout>
+
+
+
+</ScrollView>

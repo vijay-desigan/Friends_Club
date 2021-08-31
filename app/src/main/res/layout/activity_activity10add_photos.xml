@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Activity10addPhotos">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginHorizontal="10dp"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TextView
+            android:layout_marginTop="100dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="30dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginBottom="10dp"
+            android:gravity="left"
+            android:text="Add photos..."
+            android:textColor="#424242"
+            android:textSize="42sp" />
+        <TextView
+            android:text="Add at least 2 photos to continue"
+            android:gravity="left"
+            android:textSize="18sp"
+            android:layout_marginLeft="30dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+        <LinearLayout
+            android:layout_marginTop="15dp"
+            android:layout_gravity="center"
+            android:orientation="horizontal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+            <ImageButton
+                android:id="@+id/image_upload_1"
+                android:layout_marginRight="5dp"
+                android:layout_width="150dp"
+                android:layout_height="200dp"/>
+            <ImageButton
+                android:id="@+id/image_upload_2"
+                android:layout_marginLeft="5dp"
+                android:layout_width="150dp"
+                android:layout_height="200dp"/>
+        </LinearLayout>
+        <LinearLayout
+            android:layout_marginTop="5dp"
+            android:layout_gravity="center"
+            android:orientation="horizontal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+            <ImageButton
+                android:id="@+id/image_upload_3"
+                android:layout_marginRight="5dp"
+                android:layout_width="150dp"
+                android:layout_height="200dp"/>
+            <ImageButton
+                android:id="@+id/iamge_upload_4"
+                android:layout_marginLeft="5dp"
+                android:layout_width="150dp"
+                android:layout_height="200dp"/>
+        </LinearLayout>
+        <Button
+            android:id="@+id/continue_bt_add_photos"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="30dp"
+            android:layout_marginTop="30dp"
+            android:layout_marginRight="30dp"
+            android:background="@drawable/background_blue_curved"
+            android:text="Continue"
+            android:textSize="18dp"
+            android:textAllCaps="false" />
+        <ProgressBar
+            android:id="@+id/progress_bar"
+            android:layout_marginTop="5dp"
+            android:layout_width="match_parent"
+            android:layout_height="7dp"/>
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
