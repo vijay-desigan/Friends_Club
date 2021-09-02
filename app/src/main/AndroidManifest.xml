@@ -1,9 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.example.friendsclub">
+
     <meta-data
         android:name="settings"
         android:value=".MainActivity" />
+
     <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
 
@@ -14,7 +16,14 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.FriendsClub">
-        <activity android:name=".settings_profile"></activity>
+        <activity android:name=".Splash_screen">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".settings_profile" />
         <activity android:name=".homepage" />
         <activity android:name=".testing_card_swipe" />
         <activity android:name=".recycler_view_testing" />
@@ -51,11 +60,7 @@
         <activity
             android:name=".MainActivity"
             android:launchMode="singleTask">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
 
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
         </activity>
     </application>
 
