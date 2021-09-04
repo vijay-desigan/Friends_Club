@@ -83,7 +83,8 @@
             android:id="@+id/progress_bar"
             android:layout_marginTop="5dp"
             android:layout_width="match_parent"
-            android:layout_height="7dp"/>
+            android:layout_height="7dp"
+            android:visibility="invisible"/>
     </LinearLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

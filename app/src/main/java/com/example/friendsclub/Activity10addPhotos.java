@@ -69,9 +69,8 @@ public class Activity10addPhotos extends AppCompatActivity {
         image_bt_4=findViewById(R.id.iamge_upload_4);
         progressBar=findViewById(R.id.progress_bar);
 
-
         mStorageRef= FirebaseStorage.getInstance().getReference("Images/"+userID);
-        
+
 
         image_bt_1.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -105,8 +104,9 @@ public class Activity10addPhotos extends AppCompatActivity {
         continue_bt_add_photos.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-               if(image_bt_1.getDrawable()!=null && image_bt_2.getDrawable()!=null){
-                   image_name="image"+"1";
+                progressBar.setVisibility(View.VISIBLE);
+                if(image_bt_1.getDrawable()!=null && image_bt_2.getDrawable()!=null){
+                    image_name="image"+"1";
                     upload(imguri_1);
                     download_url_1=download_url;
                     image_name=image_name+"2";
@@ -145,17 +145,17 @@ public class Activity10addPhotos extends AppCompatActivity {
                         }
                     });
                 }else{
-                   Toast.makeText(Activity10addPhotos.this,"please select at least 2 photos",Toast.LENGTH_LONG).show();
-               }
+                    Toast.makeText(Activity10addPhotos.this,"please select at least 2 photos",Toast.LENGTH_LONG).show();
+                }
             }
         });
     }
 
     private void upload(Uri uri){
         StorageReference ref=mStorageRef.child(image_name+"."+getExtension(uri));
-        ProgressDialog progressDialog=new ProgressDialog(this);
-        progressDialog.setTitle("uploading..");
-        progressDialog.show();
+//        ProgressDialog progressDialog=new ProgressDialog(this);
+//        progressDialog.setTitle("uploading..");
+//        progressDialog.show();
 
         ref.putFile(uri).addOnSuccessListener(new OnSuccessListener<UploadTask.TaskSnapshot>() {
             @Override
@@ -168,8 +168,8 @@ public class Activity10addPhotos extends AppCompatActivity {
                         download_url=uri.toString();
                     }
                 });
-               //Uri downloadedUri=taskSnapshot.getDownloadUri();
-                progressDialog.dismiss();
+                //Uri downloadedUri=taskSnapshot.getDownloadUri();
+//                progressDialog.dismiss();
                 //download_url=taskSnapshot.getDownloadUri();
 
                 Toast.makeText(Activity10addPhotos.this,"image uploaded",Toast.LENGTH_LONG).show();
@@ -177,14 +177,14 @@ public class Activity10addPhotos extends AppCompatActivity {
         }).addOnFailureListener(new OnFailureListener() {
             @Override
             public void onFailure(@NonNull Exception e) {
-                progressDialog.dismiss();
+//                progressDialog.dismiss();
                 Toast.makeText(Activity10addPhotos.this,"Failed "+e.getMessage(),Toast.LENGTH_LONG).show();
             }
         }).addOnProgressListener(new OnProgressListener<UploadTask.TaskSnapshot>() {
             @Override
             public void onProgress(@NonNull UploadTask.TaskSnapshot snapshot) {
                 double progress=(100.0*snapshot.getBytesTransferred()/snapshot.getTotalByteCount());
-            progressDialog.setMessage("Uploaded "+(int)progress+"%");
+//            progressDialog.setMessage("Uploaded "+(int)progress+"%");
             }
         });
 
