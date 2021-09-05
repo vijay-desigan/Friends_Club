@@ -28,27 +28,34 @@
             android:gravity="left"
             android:text="My
             University is.."
+            android:fontFamily="@font/overlock_bold"
             android:textColor="#424242"
             android:textSize="42sp" />
 
         <EditText
             android:id="@+id/et_uni"
+            android:background="@drawable/edit_textbackground"
+            android:hint="Name of the University"
+            android:fontFamily="@font/overlock"
+            android:padding="10dp"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginLeft="30dp"
             android:layout_marginTop="30dp"
+            android:elevation="10dp"
             android:layout_marginRight="30dp" />
 
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="10dp"
+            android:layout_marginTop="20dp"
             android:layout_marginLeft="30dp"
             android:layout_marginRight="20dp"
-            android:gravity="left"
+            android:textAlignment="center"
+            android:fontFamily="@font/overlock"
             android:text="This is how it will appear in Friends Club,
 and you will not be able to change it"
-            android:textSize="18sp" />
+            android:textSize="12sp" />
 
         <Button
             android:id="@+id/continue_bt_uni"
@@ -59,7 +66,10 @@ and you will not be able to change it"
             android:layout_marginRight="30dp"
             android:background="@drawable/background_blue_curved"
             android:text="Continue"
+            android:singleLine="true"
+            android:inputType="text"
             android:textAllCaps="false"
+            android:fontFamily="@font/overlock_black"
             android:textSize="18dp" />
 
 
