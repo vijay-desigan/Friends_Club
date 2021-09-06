@@ -10,8 +10,6 @@
         android:orientation="vertical"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_marginLeft="20dp"
-        android:layout_marginRight="20dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -21,10 +19,11 @@
             android:layout_marginTop="100dp"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginLeft="20dp"
-            android:layout_marginRight="20dp"
+            android:layout_marginLeft="30dp"
+            android:layout_marginRight="30dp"
             android:gravity="left"
             android:text="My birthday is.."
+            android:fontFamily="@font/overlock_bold"
             android:textColor="#424242"
             android:textSize="42sp" />
 
@@ -39,8 +38,10 @@
             <TextView
                 android:layout_marginLeft="55dp"
                 android:layout_marginRight="30dp"
-                android:gravity="left"
                 android:textSize="18sp"
+                android:layout_marginTop="4dp"
+                android:textAlignment="center"
+                android:fontFamily="@font/overlock"
                 android:text="Your age will be public"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"/>
@@ -50,7 +51,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginLeft="30dp"
-            android:layout_marginTop="170dp"
+            android:layout_marginTop="150dp"
             android:layout_marginRight="30dp"
             android:background="@drawable/curved_blue_bg"
             android:text="Continue"
