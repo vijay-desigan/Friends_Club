@@ -22,12 +22,11 @@
     <LinearLayout
         android:id="@+id/functions"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-
+        android:layout_height="65dp"
+        android:layout_centerHorizontal="true"
         android:layout_above="@+id/bottom_navigation"
         android:layout_gravity="center"
-        android:layout_marginHorizontal="5dp"
-        android:layout_marginBottom="6dp"
+        android:layout_marginBottom="4dp"
         android:gravity="center"
         android:orientation="horizontal">
 
@@ -35,35 +34,46 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:background="@drawable/circle_button"
-            android:src="@drawable/ic_restore_landing_page" />
+            android:src="@drawable/ic_restore_landing_page"
+            android:layout_marginBottom="2dp"
+            android:elevation="4dp"/>
 
         <ImageButton
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginLeft="20dp"
             android:background="@drawable/circle_button"
-            android:src="@drawable/ic_close_landing_page" />
+            android:src="@drawable/ic_close_landing_page"
+            android:layout_marginBottom="2dp"
+            android:elevation="4dp"/>
 
         <ImageButton
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginLeft="20dp"
             android:background="@drawable/circle_button"
-            android:src="@drawable/ic_star_landing_page" />
+            android:src="@drawable/ic_star_landing_page"
+            android:layout_marginBottom="2dp"
+            android:elevation="4dp"/>
 
         <ImageButton
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginLeft="20dp"
             android:background="@drawable/circle_button"
-            android:src="@drawable/ic_like_landing_page" />
+            android:src="@drawable/ic_like_landing_page"
+            android:layout_marginBottom="2dp"
+            android:elevation="4dp"/>
 
         <ImageButton
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginLeft="20dp"
+
             android:background="@drawable/circle_button"
-            android:src="@drawable/ic_thumb_up_landing_page" />
+            android:src="@drawable/ic_thumb_up_landing_page"
+            android:layout_marginBottom="2dp"
+            android:elevation="4dp"/>
 
     </LinearLayout>
 
