@@ -11,19 +11,12 @@
         android:orientation="vertical"
         android:layout_width="match_parent"
         android:layout_height="match_parent">
-        <androidx.cardview.widget.CardView
-            android:layout_marginTop="20dp"
-            android:layout_gravity="center"
-            app:cardPreventCornerOverlap="false"
-            app:cardCornerRadius="75dp"
-            android:layout_width="120dp"
-            android:layout_height="120dp">
-            <ImageButton
+
+            <com.blogspot.atifsoftwares.circularimageview.CircularImageView
                 android:id="@+id/image_update"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
+                android:layout_width="120dp"
+                android:layout_height="120dp"
                 android:layout_gravity="center"/>
-        </androidx.cardview.widget.CardView>
         <TextView
             android:layout_marginTop="5dp"
             android:gravity="center"

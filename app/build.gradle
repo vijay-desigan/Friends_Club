@@ -74,6 +74,9 @@ dependencies {
     implementation 'com.jakewharton:butterknife:10.2.3'
     annotationProcessor 'com.jakewharton:butterknife-compiler:10.2.3'
 
+    // Circle ImageView
+    implementation 'com.github.mohammadatif:CircularImageView:1.0.1'
+
 
 }
 repositories {

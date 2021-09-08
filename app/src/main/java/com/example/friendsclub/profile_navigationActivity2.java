@@ -17,6 +17,7 @@ import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.blogspot.atifsoftwares.circularimageview.CircularImageView;
 import com.bumptech.glide.Glide;
 import com.google.android.gms.auth.api.signin.GoogleSignIn;
 import com.google.android.gms.auth.api.signin.GoogleSignInClient;
@@ -39,7 +40,7 @@ import static android.content.ContentValues.TAG;
 public class profile_navigationActivity2 extends AppCompatActivity {
     Button logout_navigation;
     ImageButton edit_profile_button;
-    ImageView iv_test_dp;
+    CircularImageView iv_test_dp;
     String image_url;
     TextView tv_name;
     FirebaseAuth firebaseAuth=FirebaseAuth.getInstance();

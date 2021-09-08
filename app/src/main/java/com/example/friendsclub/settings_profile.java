@@ -23,6 +23,7 @@ import android.widget.ImageButton;
 import android.widget.ProgressBar;
 import android.widget.Toast;
 
+import com.blogspot.atifsoftwares.circularimageview.CircularImageView;
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.OnFailureListener;
 import com.google.android.gms.tasks.OnSuccessListener;
@@ -50,7 +51,7 @@ public class settings_profile extends AppCompatActivity {
     String userID=firebaseUser.getUid();
     String image_name;
     EditText about_et,phone_et,job_et,company_et,university_et,city_et;
-    ImageButton new_image;
+    CircularImageView new_image;
     Button save_changes;
     Uri image_uri;
     StorageReference mStorageRef;
