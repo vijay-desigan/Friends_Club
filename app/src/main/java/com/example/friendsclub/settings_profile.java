@@ -24,6 +24,7 @@ import android.widget.ProgressBar;
 import android.widget.Toast;
 
 import com.blogspot.atifsoftwares.circularimageview.CircularImageView;
+import com.bumptech.glide.Glide;
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.OnFailureListener;
 import com.google.android.gms.tasks.OnSuccessListener;
@@ -31,6 +32,7 @@ import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.firestore.DocumentReference;
+import com.google.firebase.firestore.DocumentSnapshot;
 import com.google.firebase.firestore.FirebaseFirestore;
 import com.google.firebase.firestore.SetOptions;
 import com.google.firebase.storage.FirebaseStorage;
@@ -76,6 +78,44 @@ public class settings_profile extends AppCompatActivity {
         save_changes=findViewById(R.id.save_changes_bt);
 
         new_image=findViewById(R.id.image_update);
+
+        DocumentReference documentReference=firebaseFirestore.collection("users").document(userID);
+        documentReference.get().addOnCompleteListener(new OnCompleteListener<DocumentSnapshot>() {
+            @Override
+            public void onComplete(@NonNull Task<DocumentSnapshot> task) {
+                if(task.isSuccessful()){
+                    DocumentSnapshot doc=task.getResult();
+                    if(doc.exists()){
+                        if(doc.getString("about")!=null && doc.getString("about")!=""){
+                            about_et.setText(doc.getString("about"));
+                        }
+                        if(doc.getString("city")!=null && doc.getString("city")!=""){
+                            city_et.setText(doc.getString("city"));
+                        }
+                        if(doc.getString("company")!=null && doc.getString("company")!=""){
+                            company_et.setText(doc.getString("company"));
+                        }
+                        if(doc.getString("contact")!=null && doc.getString("contact")!=""){
+                            phone_et.setText(doc.getString("contact"));
+                        }
+                        if(doc.getString("job")!=null && doc.getString("job")!=""){
+                            job_et.setText(doc.getString("job"));
+                        }
+                        if(doc.getString("university")!=null && doc.getString("university")!=""){
+                            university_et.setText(doc.getString("university  "));
+                        }
+                    }else{
+                        Log.d(TAG, "                    No such document");
+                    }
+                }
+            }
+        });
+
+
+        Glide.with(settings_profile.this)
+                .load(firebaseUser.getPhotoUrl())
+                .into(new_image);
+
         new_image.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
