@@ -10,7 +10,8 @@
     <LinearLayout
         android:orientation="vertical"
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="match_parent"
+        android:layout_margin="10dp">
 
             <com.blogspot.atifsoftwares.circularimageview.CircularImageView
                 android:id="@+id/image_update"
@@ -20,127 +21,119 @@
         <TextView
             android:layout_marginTop="5dp"
             android:gravity="center"
+            android:fontFamily="@font/overlock_bold"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:textColor="@color/black"
-            android:textSize="20sp"
+            android:textSize="21sp"
             android:text="Change picture"/>
-        <TextView
+
+        <com.google.android.material.textfield.TextInputLayout
             android:layout_marginTop="5dp"
-            android:layout_marginHorizontal="10dp"
-            android:gravity="left"
+            android:gravity="center_horizontal"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:textColor="@color/black"
-            android:textSize="21sp"
-            android:text=" About you"/>
-        <EditText
-            android:layout_marginTop="5dp"
-            android:layout_marginHorizontal="10dp"
-            android:gravity="left"
-            android:id="@+id/about_et"
+            android:textSize="18sp"
+            android:layout_margin="10dp"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:hint="About you"
+            app:helperText="Enter Details about you"
+            app:boxStrokeColor="@color/buttonColor"
+            >
+            <com.google.android.material.textfield.TextInputEditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/about_et"
+                android:inputType="text"/>
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:textSize="20sp"
-            android:text="I'm a"/>
-        <TextView
-            android:layout_marginTop="5dp"
-            android:layout_marginHorizontal="10dp"
-            android:gravity="left"
+            android:textSize="18sp"
+            android:layout_margin="10dp"
+            android:hint="Phone no"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            app:helperText="Enter your Phone number"
+            >
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/phone_no_et"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="number"
+                />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:textColor="@color/black"
-            android:textSize="21sp"
-            android:text=" Contact"/>
-        <EditText
-            android:layout_marginTop="5dp"
-            android:layout_marginHorizontal="10dp"
-            android:gravity="left"
-            android:id="@+id/phone_no_et"
+            android:textSize="18sp"
+            android:hint="Job Title"
+            android:layout_margin="10dp"
+            app:helperText="Enter your Position of the Job"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+            <com.google.android.material.textfield.TextInputEditText
+                android:layout_width="match_parent"
+                android:id="@+id/job_et"
+                android:layout_height="wrap_content"/>
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:textSize="20sp"
-            android:inputType="number"
-            android:text="Add phone number"/>
-        <TextView
-            android:layout_marginTop="5dp"
-            android:layout_marginHorizontal="10dp"
-            android:gravity="left"
+            android:textSize="18sp"
+            android:hint="Add Company"
+            android:layout_margin="10dp"
+            app:helperText="Enter your company name"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/company_et"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:textColor="@color/black"
-            android:textSize="21sp"
-            android:text="Job tittle"/>
-        <EditText
-            android:layout_marginTop="5dp"
-            android:layout_marginHorizontal="10dp"
-            android:gravity="left"
-            android:id="@+id/job_et"
+            android:textSize="18sp"
+            android:hint="Add University"
+            android:layout_margin="10dp"
+            app:helperText="Enter your University name"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/university_et"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_margin="10dp"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:textSize="20sp"
-            android:text="Add job tittle"/>
-        <TextView
-            android:layout_marginTop="5dp"
-            android:layout_marginHorizontal="10dp"
-            android:gravity="left"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:textColor="@color/black"
-            android:textSize="21sp"
-            android:text="Company"/>
-        <EditText
-            android:layout_marginTop="5dp"
-            android:layout_marginHorizontal="10dp"
-            android:gravity="left"
-            android:id="@+id/company_et"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:textSize="20sp"
-            android:text="Add Company"/>
-        <TextView
-            android:layout_marginTop="5dp"
-            android:layout_marginHorizontal="10dp"
-            android:gravity="left"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:textColor="@color/black"
-            android:textSize="21sp"
-            android:text="School"/>
-        <EditText
-            android:layout_marginTop="5dp"
-            android:layout_marginHorizontal="10dp"
-            android:gravity="left"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:id="@+id/university_et"
-            android:textSize="20sp"
-            android:text="Add University"/>
-        <TextView
-            android:layout_marginTop="5dp"
-            android:layout_marginHorizontal="10dp"
-            android:gravity="left"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:textColor="@color/black"
-            android:textSize="21sp"
-            android:text="Living in"/>
-        <EditText
-            android:layout_marginTop="5dp"
-            android:layout_marginHorizontal="10dp"
-            android:gravity="left"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:id="@+id/city_et"
-            android:textSize="20sp"
-            android:text="Add city"/>
+            android:textSize="18sp"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:hint="Add City"
+            app:helperText="Enter name of your City"
+            >
+            <com.google.android.material.textfield.TextInputEditText
+                android:layout_width="match_parent"
+                android:id="@+id/city_et"
+                android:layout_height="wrap_content"/>
+        </com.google.android.material.textfield.TextInputLayout>
         <Button
-            android:layout_marginTop="5dp"
+            android:layout_margin="10dp"
             android:id="@+id/save_changes_bt"
             android:text="Save Changes"
-            android:layout_marginHorizontal="10dp"
+            android:textSize="18sp"
+            android:textAllCaps="false"
+            style="@style/CustomButton.Button"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"/>
+            android:layout_height="60dp"/>
     </LinearLayout>
 
 
