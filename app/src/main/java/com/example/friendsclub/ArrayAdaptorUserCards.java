@@ -22,7 +22,7 @@ import java.util.List;
 import static android.content.ContentValues.TAG;
 
 class ArrayAdaptorUserCards extends ArrayAdapter<UserCards> {
-    Context contex;
+    Context context;
     StorageReference storageReference;
 
     public ArrayAdaptorUserCards(@NonNull Context context, int resourceId, List<UserCards>items) {

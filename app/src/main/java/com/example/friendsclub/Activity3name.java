@@ -62,8 +62,6 @@ public class Activity3name extends AppCompatActivity {
                             DocumentReference documentReference=firebaseFirestore.collection("users").document(userID);
                             Map<String, Object> user=new HashMap<>();
                             user.put("name",name);
-                            user.put("likes","");
-                            user.put("dislike","");
                             user.put("UID",userID);
                             documentReference.set(user, SetOptions.merge()).addOnCompleteListener(new OnCompleteListener<Void>() {
                                 @Override

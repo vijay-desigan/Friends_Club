@@ -46,6 +46,7 @@ import java.util.Map;
 import static android.content.ContentValues.TAG;
 
 public class settings_profile extends AppCompatActivity {
+    boolean image_choosed=false;
     ImageButton change_dp;
     FirebaseAuth firebaseAuth=FirebaseAuth.getInstance();
     FirebaseUser firebaseUser=firebaseAuth.getCurrentUser();
@@ -103,6 +104,8 @@ public class settings_profile extends AppCompatActivity {
                         }
                         if(doc.getString("university")!=null && doc.getString("university")!=""){
                             university_et.setText(doc.getString("university  "));
+                        }else{
+                            university_et.setText("NA");
                         }
                     }else{
                         Log.d(TAG, "                    No such document");
@@ -110,8 +113,7 @@ public class settings_profile extends AppCompatActivity {
                 }
             }
         });
-
-
+        
         Glide.with(settings_profile.this)
                 .load(firebaseUser.getPhotoUrl())
                 .into(new_image);
@@ -150,7 +152,7 @@ public class settings_profile extends AppCompatActivity {
                         }
                     }
                 });
-                if(new_image.getDrawable()!=null){
+                if(new_image.getDrawable()!=null && image_choosed==true){
                     upload(image_uri);
                 }
             }
@@ -209,6 +211,7 @@ public class settings_profile extends AppCompatActivity {
         if(requestCode==1 && resultCode==RESULT_OK && data!=null && data.getData()!=null){
             Log.d(TAG, "                              GOT IMAGE ");
             image_uri=data.getData();
+            image_choosed=true;
             new_image.setImageURI(image_uri);
         }
     }

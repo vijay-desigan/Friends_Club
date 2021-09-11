@@ -77,7 +77,7 @@ public class homepage extends AppCompatActivity {
 
         rowItemsUser = new ArrayList<UserCards>();
         rowItemsUser.add(new UserCards("userId 2","sample card ".concat(String.valueOf(i)),"https://media.idownloadblog.com/wp-content/uploads/2020/10/iPhone-12-red-dark-wallpaper.png"));
-        Log.d(TAG,"ADDED SAMPLE CARD");
+        Log.d(TAG," SAMPLE ADDED SAMPLE CARD");
         //add items to the list from firebase
         Query query=users_cr.whereEqualTo("gender","MAN");
         query.get().addOnCompleteListener(new OnCompleteListener<QuerySnapshot>() {
@@ -120,28 +120,12 @@ public class homepage extends AppCompatActivity {
 
             @Override
             public void onLeftCardExit(Object dataObject) {
-                //left swipe for like
-                DocumentReference documentReference=firebaseFirestore.collection("users").document(current_uid);
-                documentReference.get().addOnCompleteListener(new OnCompleteListener<DocumentSnapshot>() {
-                    @Override
-                    public void onComplete(@NonNull Task<DocumentSnapshot> task) {
-                        if (task.isSuccessful()) {
-                            DocumentSnapshot document = task.getResult();
-                            if (document.exists()) {
-                                Log.d(TAG, "DocumentSnapshot data: " + document.getData());
-                                dislikes_previous=likes_previous+document.getString("dislikes");
-                            } else {
-                                Log.d(TAG, "No such document");
-                            }
-                        } else {
-                            Log.d(TAG, "get failed with ", task.getException());
-                        }
-                    }
-                });
-                dislikes_previous=dislikes_previous+rowItemsUser.get(0).getUserId();
-                Map<String,Object>likes=new HashMap<>();
-                likes.put("dislikes",dislikes_previous);
-                documentReference.set(likes, SetOptions.merge());
+                //right to left swipe for dislike
+                DocumentReference documentReference=firebaseFirestore.collection("users").document(current_uid).collection("connections").document("dislikes");
+                Map<String,Object>dislikes=new HashMap<>();
+                UserCards temp=rowItemsUser.get(0);
+                dislikes.put(temp.getUserId(),true);
+                documentReference.set(dislikes, SetOptions.merge());
                 //Do something on the left!
                 //You also have access to the original object.
                 //If you want to use it just cast it (String) dataObject
@@ -150,28 +134,12 @@ public class homepage extends AppCompatActivity {
 
             @Override
             public void onRightCardExit(Object dataObject) {
-                //right swipe for dislike
-                DocumentReference documentReference=firebaseFirestore.collection("users").document(current_uid);
-                documentReference.get().addOnCompleteListener(new OnCompleteListener<DocumentSnapshot>() {
-                    @Override
-                    public void onComplete(@NonNull Task<DocumentSnapshot> task) {
-                        if(task.isSuccessful()){
-                            DocumentSnapshot document=task.getResult();
-                            if(document.exists()){
-                                Log.d(TAG, "DocumentSnapshot data: " + document.getData());
-                                likes_previous=likes_previous+document.getString("likes");
-                            }else{
-                                Log.d(TAG, "No such document");
-                            }
-                        }else{
-                            Log.d(TAG, "Failed to receive document");
-                        }
-                    }
-                });
-                likes_previous=likes_previous+rowItemsUser.get(0).getUserId();
-                Map<String,Object>likes=new HashMap<>();
-                likes.put("likes",likes_previous);
-                documentReference.set(likes, SetOptions.merge());
+                //left to right swipe for like
+                DocumentReference documentReference=firebaseFirestore.collection("users").document(current_uid).collection("connections").document("likes");
+                Map<String,Object>dislikes=new HashMap<>();
+                UserCards temp=rowItemsUser.get(0);
+                dislikes.put(temp.getUserId(),true);
+                documentReference.set(dislikes, SetOptions.merge());
                 // makeToast(testing_card_swipe.this, "Right!");
             }
 
