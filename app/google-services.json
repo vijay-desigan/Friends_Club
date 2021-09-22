@@ -7,17 +7,17 @@
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:439921796325:android:a624086f0939e3a993e00c",
+        "mobilesdk_app_id": "1:439921796325:android:0491c1d08754226c93e00c",
         "android_client_info": {
-          "package_name": "com.example.friendsclub"
+          "package_name": "com.krashit.friendsclub"
         }
       },
       "oauth_client": [
         {
-          "client_id": "439921796325-a31i8nqbalvvdso5pkn7cssgkb13bhse.apps.googleusercontent.com",
+          "client_id": "439921796325-1dka99dvmu8tpg2fld5p8rp8aeo59oso.apps.googleusercontent.com",
           "client_type": 1,
           "android_info": {
-            "package_name": "com.example.friendsclub",
+            "package_name": "com.krashit.friendsclub",
             "certificate_hash": "89da1c53807ac52838084e25cf88c0186e36cf95"
           }
         },

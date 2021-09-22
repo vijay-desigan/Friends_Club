@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.example.friendsclub">
+    package="com.krashit.friendsclub">
 
     <meta-data
         android:name="settings"
@@ -16,52 +16,51 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.FriendsClub">
-        <activity android:name=".Splash_screen">
+        <activity android:name="com.krashit.friendsclub.testing_chats"></activity>
+        <activity android:name="com.krashit.friendsclub.Splash_screen">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".settings_profile" />
-        <activity android:name=".homepage" />
-        <activity android:name=".testing_card_swipe" />
-        <activity android:name=".recycler_view_testing" />
+        <activity android:name="com.krashit.friendsclub.settings_profile" />
+        <activity android:name="com.krashit.friendsclub.homepage" />
+        <activity android:name="com.krashit.friendsclub.testing_card_swipe" />
+        <activity android:name="com.krashit.friendsclub.recycler_view_testing" />
         <activity android:name=".MainActivity2" />
         <activity android:name=".recycler_view_test" />
-        <activity android:name=".add_photo_testActivity2" />
-        <activity android:name=".profile_navigationActivity2" />
-        <activity android:name=".chat_navigationActivity2" />
-        <activity android:name=".live_navigationActivity2" />
-        <activity android:name=".likes_navigationActivity" />
-        <activity android:name=".Landing_navigationActivity" />
-        <activity android:name=".Activity10addPhotos" />
-        <activity android:name=".Activity9passion" />
-        <activity android:name=".Activity8university" />
+        <activity android:name="com.krashit.friendsclub.add_photo_testActivity2" />
+        <activity android:name="com.krashit.friendsclub.profile_navigationActivity2" />
+        <activity android:name="com.krashit.friendsclub.chat_navigationActivity2" />
+        <activity android:name="com.krashit.friendsclub.live_navigationActivity2" />
+        <activity android:name="com.krashit.friendsclub.likes_navigationActivity" />
+        <activity android:name="com.krashit.friendsclub.Landing_navigationActivity" />
+        <activity android:name="com.krashit.friendsclub.Activity10addPhotos" />
+        <activity android:name="com.krashit.friendsclub.Activity9passion" />
+        <activity android:name="com.krashit.friendsclub.Activity8university" />
         <activity
-            android:name=".Activity2profile"
+            android:name="com.krashit.friendsclub.Activity2profile"
             android:launchMode="singleTask" />
         <activity
-            android:name=".Activity7show_me"
+            android:name="com.krashit.friendsclub.Activity7show_me"
             android:launchMode="singleTask" />
         <activity
-            android:name=".Activity6orientation"
+            android:name="com.krashit.friendsclub.Activity6orientation"
             android:launchMode="singleTask" />
         <activity
-            android:name=".Activity5gender"
+            android:name="com.krashit.friendsclub.Activity5gender"
             android:launchMode="singleTask" />
         <activity
-            android:name=".Activity4date"
+            android:name="com.krashit.friendsclub.Activity4date"
             android:launchMode="singleTask" />
         <activity
-            android:name=".Activity3name"
+            android:name="com.krashit.friendsclub.Activity3name"
             android:launchMode="singleTask" />
-        <activity android:name=".Activity2whats_your_email" />
+        <activity android:name="com.krashit.friendsclub.Activity2whats_your_email" />
         <activity
-            android:name=".MainActivity"
-            android:launchMode="singleTask">
-
-        </activity>
+            android:name="com.krashit.friendsclub.MainActivity"
+            android:launchMode="singleTask"></activity>
 
         <meta-data
             android:name="preloaded_fonts"
