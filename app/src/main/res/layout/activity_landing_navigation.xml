@@ -19,7 +19,7 @@
         android:layout_margin="10dp"
         android:id="@+id/iv_match_person"
         android:layout_width="match_parent"
-        android:layout_height="500dp" />//previous value was 500dp
+        android:layout_height="500dp" />
 
     <TextView
         android:id="@+id/tv_match_person"

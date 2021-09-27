@@ -126,7 +126,7 @@
                 android:layout_height="wrap_content"/>
         </com.google.android.material.textfield.TextInputLayout>
         <Button
-            android:layout_margin="10dp"
+            android:layout_margin="20dp"
             android:id="@+id/save_changes_bt"
             android:text="Save Changes"
             android:textSize="18sp"

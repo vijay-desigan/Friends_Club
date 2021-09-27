@@ -77,6 +77,9 @@ dependencies {
     // Circle ImageView
     implementation 'com.github.mohammadatif:CircularImageView:1.0.1'
 
+    //Sticky button
+    implementation 'com.github.amarjain07:StickyScrollView:1.0.2'
+
 
 }
 repositories {
